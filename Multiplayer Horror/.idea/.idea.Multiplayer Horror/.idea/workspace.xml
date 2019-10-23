@@ -74,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Photon/GameControlers/PlayerMovement.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="51" column="64" selection-start-line="51" selection-start-column="64" selection-end-line="51" selection-end-column="64" />
+            <state relative-caret-position="-301">
+              <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
               <folding>
                 <marker date="1570983370593" expanded="true" signature="6:110" ph="..." />
                 <marker date="1570983370593" expanded="true" signature="184:2986" ph="{...}" />
@@ -103,7 +103,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Photon/GameControlers/GameSetup.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -113,6 +113,21 @@
                 <marker date="1570984340680" expanded="true" signature="132:375" ph="{...}" />
                 <marker date="1570984340680" expanded="true" signature="274:373" ph="{...}" />
                 <marker date="1570984340680" expanded="true" signature="314:367" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Buttons/room1/ButtonScript.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+              <folding>
+                <marker date="1571858481768" expanded="false" signature="6:78" ph="..." />
+                <marker date="1571858481768" expanded="true" signature="121:295" ph="{...}" />
+                <marker date="1571858481768" expanded="true" signature="193:214" ph="{...}" />
+                <marker date="1571858481768" expanded="true" signature="272:293" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -131,6 +146,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/ProCore/ProGrids/Classes/pg_IconUtility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buttons/room1/ButtonScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Photon/PhotonRoom.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/Views/PhotonTransformView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Photon/PhotonLobby.cs" root0="FORCE_HIGHLIGHTING" />
@@ -178,11 +194,11 @@
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
       </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="AssemblyExplorer" />
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -247,12 +263,13 @@
       <workItem from="1570104341352" duration="3825000" />
       <workItem from="1570878646957" duration="4059000" />
       <workItem from="1570956881141" duration="5069000" />
-      <workItem from="1571498140819" duration="673000" />
+      <workItem from="1571498140819" duration="675000" />
+      <workItem from="1571858083185" duration="2017000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71212000" />
+    <option name="totallyTimeSpent" value="73231000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -267,7 +284,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14757591" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14917421" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -287,7 +304,7 @@
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Unit Tests" order="13" />
       <window_info anchor="bottom" id="Terminal" order="14" />
-      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" visible="true" weight="0.12700106" />
+      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" weight="0.12593383" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -658,6 +675,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/TextOnObject.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Photon/PhotonLobby.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
@@ -713,10 +731,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/PunCockpit/Scripts/Autonomous UI/DocLinkButton.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Photon/GameControlers/GameSetup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <marker date="1570984340680" expanded="true" signature="6:92" ph="..." />
+            <marker date="1570984340680" expanded="true" signature="132:375" ph="{...}" />
+            <marker date="1570984340680" expanded="true" signature="274:373" ph="{...}" />
+            <marker date="1570984340680" expanded="true" signature="314:367" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Buttons/room1/ButtonScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding>
+            <marker date="1571858481768" expanded="false" signature="6:78" ph="..." />
+            <marker date="1571858481768" expanded="true" signature="121:295" ph="{...}" />
+            <marker date="1571858481768" expanded="true" signature="193:214" ph="{...}" />
+            <marker date="1571858481768" expanded="true" signature="272:293" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Photon/GameControlers/PlayerMovement.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="51" column="64" selection-start-line="51" selection-start-column="64" selection-end-line="51" selection-end-column="64" />
+        <state relative-caret-position="-301">
+          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
           <folding>
             <marker date="1570983370593" expanded="true" signature="6:110" ph="..." />
             <marker date="1570983370593" expanded="true" signature="184:2986" ph="{...}" />
@@ -736,26 +787,6 @@
             <marker date="1570983370593" expanded="true" signature="2687:2978" ph="{...}" />
             <marker date="1570983370593" expanded="true" signature="2725:2839" ph="{...}" />
             <marker date="1570983370593" expanded="true" signature="2856:2968" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/TextOnObject.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Photon/GameControlers/GameSetup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <marker date="1570984340680" expanded="true" signature="6:92" ph="..." />
-            <marker date="1570984340680" expanded="true" signature="132:375" ph="{...}" />
-            <marker date="1570984340680" expanded="true" signature="274:373" ph="{...}" />
-            <marker date="1570984340680" expanded="true" signature="314:367" ph="{...}" />
           </folding>
         </state>
       </provider>
