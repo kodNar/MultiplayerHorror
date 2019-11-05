@@ -233,7 +233,10 @@
               <e p="ButtonScript.cs" t="Include" />
             </e>
           </e>
-          <e p="CameraController.cs" t="Include" />
+          <e p="CameraScripts" t="Include">
+            <e p="CameraController.cs" t="Include" />
+            <e p="PlayerRaycasting.cs" t="Include" />
+          </e>
           <e p="Photon" t="Include">
             <e p="GameControlers" t="Include">
               <e p="GameSetup.cs" t="Include" />
