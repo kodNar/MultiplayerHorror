@@ -16,10 +16,26 @@ public class ButtonScript : MonoBehaviour
     public GameObject button6;
     public GameObject button7;
     public GameObject button8;
+    private Animation animationOne;
+    private Animation animationTwo;
+    private Animation animationThree;
+    private Animation animationFour;
+    private Animation animationFive;
+    private Animation animationSix;
+    private Animation animationSeven;
+    private Animation animationEight;
 
     // Start is called before the first frame update
     void Start()
     {
+        animationEight = button8.GetComponent<Animation>();
+        animationSeven = button7.GetComponent<Animation>();
+        animationSix = button6.GetComponent<Animation>();
+        animationFive = button5.GetComponent<Animation>();
+        animationFour = button4.GetComponent<Animation>();
+        animationThree = button3.GetComponent<Animation>();
+        animationTwo = button2.GetComponent<Animation>();
+        animationOne = button1.GetComponent<Animation>();
     }
 
     // Update is called once per frame
@@ -33,61 +49,60 @@ public class ButtonScript : MonoBehaviour
             {
                 case "ButtonOne":
                     Debug.Log("Button 1");
-                    button1.GetComponent<Animation>().Play();
+                    animationOne.Play();
                     selectedColors.Enqueue(1);
                     DeQueueColor();
                     break;
                 case "ButtonTwo":
                     Debug.Log("Button 2");
-                    button2.GetComponent<Animation>().Play();
+                    animationTwo.Play();
                     selectedColors.Enqueue(2);
                     DeQueueColor();
                     break;
                 case "ButtonThree":
                     Debug.Log("Button 3");
-                    button3.GetComponent<Animation>().Play();
+                    animationThree.Play();
                     selectedColors.Enqueue(3);
                     DeQueueColor();
                     break;
                 case "ButtonFour":
                     Debug.Log("Button 4");
-                    button4.GetComponent<Animation>().Play();
+                    animationFour.Play();
                     selectedColors.Enqueue(4);
                     DeQueueColor();
                     break;
                 case "ButtonFive":
                     Debug.Log("Button 5");
-                    button5.GetComponent<Animation>().Play();
+                    animationFive.Play();
                     selectedColors.Enqueue(5);
                     DeQueueColor();
                     break;
                 case "ButtonSix":
                     Debug.Log("Button 6");
-                    button6.GetComponent<Animation>().Play();
+                    animationSix.Play();
                     selectedColors.Enqueue(6);
                     DeQueueColor();
                     break;
                 case "ButtonSeven":
                     Debug.Log("Button 7");
-                    button7.GetComponent<Animation>().Play();
+                    animationSeven.Play();
                     selectedColors.Enqueue(7);
                     DeQueueColor();
                     break;
                 case "ButtonEight":
                     Debug.Log("Button 8");
-                    button8.GetComponent<Animation>().Play();
+                    animationEight.Play();
                     selectedColors.Enqueue(8);
                     DeQueueColor();
                     break;
             }
         }
 
-        if (Input.GetKey(KeyCode.P))
+        if (Input.GetMouseButtonDown(1))
         {
             foreach (int ele in selectedColors)
             {
                 Debug.Log(ele.ToString());
-                Debug.Log(selectedColors.Count);
             }
         }
     }
