@@ -19,7 +19,7 @@ public class PlayerRaycasting : MonoBehaviour
         Debug.DrawRay(this.transform.position, this.transform.forward * distanceToSee, Color.red);
         if (Physics.Raycast(this.transform.position, this.transform.forward, out whatItHit, distanceToSee)) //tar collidern för förmålet vår raycast träffade och lagrar den i "WhatItHit" variabeln.
         {
-            Debug.Log("I touched "+whatItHit.collider.gameObject.name);
+            //Debug.Log("I touched "+whatItHit.collider.gameObject.name);
             //Destroy(whatItHit.collider.gameObject);
         }
     }

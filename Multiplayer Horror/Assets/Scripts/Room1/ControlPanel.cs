@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ControlPanel : MonoBehaviour
 {
-    static Queue selectedColors = new Queue();
+    
+   public static Queue<int> selectedColors = new Queue<int>();
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,5 @@ public class ControlPanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 }
