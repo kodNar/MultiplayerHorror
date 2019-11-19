@@ -16,6 +16,10 @@ public class ButtonScript : MonoBehaviour
     public GameObject button6;
     public GameObject button7;
     public GameObject button8;
+    public GameObject reset;
+    public GameObject execute;
+    public GameObject slidingDoor;
+    private Animation animationSlidingDoor;
     private Animation animationOne;
     private Animation animationTwo;
     private Animation animationThree;
@@ -24,10 +28,17 @@ public class ButtonScript : MonoBehaviour
     private Animation animationSix;
     private Animation animationSeven;
     private Animation animationEight;
+    private Animation animationReset;
+    private Animation animationExecute;
+    private AudioSource soundExecute;
 
     // Start is called before the first frame update
     void Start()
     {
+        animationSlidingDoor = slidingDoor.GetComponent<Animation>();
+        soundExecute = execute.GetComponent<AudioSource>();
+        animationExecute = execute.GetComponent<Animation>();
+        animationReset = reset.GetComponent<Animation>();
         animationEight = button8.GetComponent<Animation>();
         animationSeven = button7.GetComponent<Animation>();
         animationSix = button6.GetComponent<Animation>();
@@ -95,6 +106,24 @@ public class ButtonScript : MonoBehaviour
                     selectedColors.Enqueue(8);
                     DeQueueColor();
                     break;
+                case "Reset":
+                    animationReset.Play();
+                    selectedColors.Clear();
+                    break;
+                case "Execute":
+                    animationExecute.Play();
+                    if (selectedColors.Contains(7) && selectedColors.Contains(5))
+                    {
+                        Debug.Log("Grattis du vann!!");
+                        animationSlidingDoor.Play();
+                    }
+                    else
+                    {
+                        Debug.Log("Det var fel, det som ligger i kön är:"+selectedColors);
+                        soundExecute.Play();
+                    }
+                    break;
+                
             }
         }
 
