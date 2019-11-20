@@ -19,6 +19,8 @@ public class ButtonScript : MonoBehaviour
     public GameObject reset;
     public GameObject execute;
     public GameObject slidingDoor;
+    public AudioClip wrong;
+    public AudioClip right;
     private Animation animationSlidingDoor;
     private Animation animationOne;
     private Animation animationTwo;
@@ -30,11 +32,13 @@ public class ButtonScript : MonoBehaviour
     private Animation animationEight;
     private Animation animationReset;
     private Animation animationExecute;
-    private AudioSource soundExecute;
+    public AudioSource soundExecute;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        
         animationSlidingDoor = slidingDoor.GetComponent<Animation>();
         soundExecute = execute.GetComponent<AudioSource>();
         animationExecute = execute.GetComponent<Animation>();
@@ -114,13 +118,16 @@ public class ButtonScript : MonoBehaviour
                     animationExecute.Play();
                     if (selectedColors.Contains(7) && selectedColors.Contains(5))
                     {
+                        soundExecute.PlayOneShot(right);
                         Debug.Log("Grattis du vann!!");
                         animationSlidingDoor.Play();
+                        
+                        
                     }
                     else
                     {
                         Debug.Log("Det var fel, det som ligger i kön är:"+selectedColors);
-                        soundExecute.Play();
+                        soundExecute.PlayOneShot(wrong);
                     }
                     break;
                 
