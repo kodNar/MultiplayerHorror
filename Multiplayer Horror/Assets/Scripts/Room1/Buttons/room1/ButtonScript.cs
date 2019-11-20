@@ -19,9 +19,11 @@ public class ButtonScript : MonoBehaviour
     public GameObject reset;
     public GameObject execute;
     public GameObject slidingDoor;
+    public GameObject slidingDoor2;
     public AudioClip wrong;
     public AudioClip right;
     private Animation animationSlidingDoor;
+    private Animation animationSlidingDoor2;
     private Animation animationOne;
     private Animation animationTwo;
     private Animation animationThree;
@@ -32,13 +34,13 @@ public class ButtonScript : MonoBehaviour
     private Animation animationEight;
     private Animation animationReset;
     private Animation animationExecute;
-    public AudioSource soundExecute;
+    private AudioSource soundExecute;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        animationSlidingDoor2 = slidingDoor2.GetComponent<Animation>();
         animationSlidingDoor = slidingDoor.GetComponent<Animation>();
         soundExecute = execute.GetComponent<AudioSource>();
         animationExecute = execute.GetComponent<Animation>();
@@ -121,7 +123,7 @@ public class ButtonScript : MonoBehaviour
                         soundExecute.PlayOneShot(right);
                         Debug.Log("Grattis du vann!!");
                         animationSlidingDoor.Play();
-                        
+                        animationSlidingDoor2.Play();
                         
                     }
                     else
