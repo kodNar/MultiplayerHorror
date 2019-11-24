@@ -1,5 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-Editor.dll:
+    - ProGrids.pg_Editor
     Assembly-CSharp.dll:
     - ButtonScript
     - GameSetup
@@ -7,6 +9,7 @@ ScriptsOnlyBuild:
     - PhotonPlayer
     - PhotonRoom
     - PlayerMovement
+    - pg_SceneMeshRender
     PhotonUnityNetworking.Editor.dll:
     - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
@@ -976,4 +979,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Multiplayer.unity
-  playerPath: C:/Users/Einar/Desktop/MultiplayerHorrorBuilds/Roota/Multiplayer Horror.exe
+  playerPath: C:/Users/Einar/Desktop/MultiplayerHorrorBuilds/Rama/Multiplayer Horror.exe
