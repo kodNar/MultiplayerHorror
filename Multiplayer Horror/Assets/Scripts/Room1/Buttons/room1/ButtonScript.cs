@@ -2,9 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using Photon.Pun;
 using UnityEngine;
 
-public class ButtonScript : MonoBehaviour
+public class ButtonScript : MonoBehaviourPunCallbacks, IPunObservable
 
 {
     private static Queue<int> selectedColors = new Queue<int>();
@@ -35,11 +36,13 @@ public class ButtonScript : MonoBehaviour
     private Animation animationReset;
     private Animation animationExecute;
     private AudioSource soundExecute;
+    private PhotonView PV;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        PV = GetComponent<PhotonView>();
         animationSlidingDoor2 = slidingDoor2.GetComponent<Animation>();
         animationSlidingDoor = slidingDoor.GetComponent<Animation>();
         soundExecute = execute.GetComponent<AudioSource>();
@@ -55,12 +58,28 @@ public class ButtonScript : MonoBehaviour
         animationOne = button1.GetComponent<Animation>();
     }
 
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            // We own this player: send the others our data
+            stream.SendNext(animationSlidingDoor.Play());
+            stream.SendNext(animationSlidingDoor2.Play());
+        }
+        else if (stream.IsReading)
+        {
+            //Network read this, others see
+            animationSlidingDoor = (Animation) stream.ReceiveNext();
+            animationSlidingDoor2 = (Animation) stream.ReceiveNext();
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            String buttonName = PlayerRaycasting.whatItHit.collider.gameObject.name;
+            String buttonName = "PlayerMovement"; //PlayerMovement.whatItHit.collider.gameObject.name;
 
             switch (buttonName)
             {
@@ -124,15 +143,14 @@ public class ButtonScript : MonoBehaviour
                         Debug.Log("Grattis du vann!!");
                         animationSlidingDoor.Play();
                         animationSlidingDoor2.Play();
-                        
                     }
                     else
                     {
-                        Debug.Log("Det var fel, det som ligger i kön är:"+selectedColors);
+                        Debug.Log("Det var fel, det som ligger i kön är:" + selectedColors);
                         soundExecute.PlayOneShot(wrong);
                     }
+
                     break;
-                
             }
         }
 
@@ -152,4 +170,86 @@ public class ButtonScript : MonoBehaviour
             selectedColors.Dequeue();
         }
     }
+    public void button_Pressed(string hit)
+    {
+        PV.RPC("button_Pressed_Network", RpcTarget.All ,hit);
+        //PlayerMovement.whatItHit.collider.gameObject.name;
+    }
+
+    [PunRPC]
+    void button_Pressed_Network(string hit)
+    {
+        Debug.Log("Hej");
+         switch (hit)
+            {
+                case "ButtonOne":
+                    Debug.Log("Button 1");
+                    animationOne.Play();
+                    selectedColors.Enqueue(1);
+                    DeQueueColor();
+                    break;
+                case "ButtonTwo":
+                    Debug.Log("Button 2");
+                    animationTwo.Play();
+                    selectedColors.Enqueue(2);
+                    DeQueueColor();
+                    break;
+                case "ButtonThree":
+                    Debug.Log("Button 3");
+                    animationThree.Play();
+                    selectedColors.Enqueue(3);
+                    DeQueueColor();
+                    break;
+                case "ButtonFour":
+                    Debug.Log("Button 4");
+                    animationFour.Play();
+                    selectedColors.Enqueue(4);
+                    DeQueueColor();
+                    break;
+                case "ButtonFive":
+                    Debug.Log("Button 5");
+                    animationFive.Play();
+                    selectedColors.Enqueue(5);
+                    DeQueueColor();
+                    break;
+                case "ButtonSix":
+                    Debug.Log("Button 6");
+                    animationSix.Play();
+                    selectedColors.Enqueue(6);
+                    DeQueueColor();
+                    break;
+                case "ButtonSeven":
+                    Debug.Log("Button 7");
+                    animationSeven.Play();
+                    selectedColors.Enqueue(7);
+                    DeQueueColor();
+                    break;
+                case "ButtonEight":
+                    Debug.Log("Button 8");
+                    animationEight.Play();
+                    selectedColors.Enqueue(8);
+                    DeQueueColor();
+                    break;
+                case "Reset":
+                    animationReset.Play();
+                    selectedColors.Clear();
+                    break;
+                case "Execute":
+                    animationExecute.Play();
+                    if (selectedColors.Contains(7) && selectedColors.Contains(5))
+                    {
+                        soundExecute.PlayOneShot(right);
+                        Debug.Log("Grattis du vann!!");
+                        animationSlidingDoor.Play();
+                        animationSlidingDoor2.Play();
+                    }
+                    else
+                    {
+                        Debug.Log("Det var fel, det som ligger i kön är:" + selectedColors);
+                        soundExecute.PlayOneShot(wrong);
+                    }
+                    break;
+            }
+    }
+   
 }

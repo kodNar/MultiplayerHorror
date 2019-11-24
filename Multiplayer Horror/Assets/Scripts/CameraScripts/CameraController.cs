@@ -29,6 +29,6 @@ public class CameraController : MonoBehaviour
         rotY += Input.GetAxis("Mouse Y") * RotSpeed;
         rotY = Mathf.Clamp(rotY, -90f, 90f);
         myCamera.transform.localRotation = Quaternion.Euler(-rotY, 0f, 0f);
-        Debug.Log("Einar");
+        
     }
 }

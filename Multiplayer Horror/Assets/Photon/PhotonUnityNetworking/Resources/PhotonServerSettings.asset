@@ -32,5 +32,12 @@ MonoBehaviour:
   - DestroySpaceship
   - Fire
   - RespawnSpaceship
+  - RPC_Shooting
+  - RPC_Ray
+  - button_pressed
+  - rayMan
+  - button_Pressed
+  - RPC_Delete
+  - button_Pressed_Network
   DisableAutoOpenWizard: 1
   ShowSettings: 1

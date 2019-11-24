@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerRaycasting : MonoBehaviour
+/*public class PlayerRaycasting : MonoBehaviour
 {
     public float distanceToSee;
-
-    public static RaycastHit whatItHit; // se till att ta bort efter viss tid.
+    public static RaycastHit whatItHit; 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +22,13 @@ public class PlayerRaycasting : MonoBehaviour
             //Debug.Log("I touched "+whatItHit.collider.gameObject.name);
             //Destroy(whatItHit.collider.gameObject);
         }
+        
     }
+    public RaycastHit GetRaycastHit()
+    {
+        return whatItHit;
+    }
+
+
 }
+*/
