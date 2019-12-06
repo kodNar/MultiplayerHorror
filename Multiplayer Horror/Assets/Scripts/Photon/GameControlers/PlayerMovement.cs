@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Security.Cryptography;
 using Photon.Pun;
 using UnityEngine;
+using WebSocketSharp;
 
 public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
 
@@ -72,75 +74,23 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
             if (Physics.Raycast(myCamera.transform.position, myCamera.transform.TransformDirection(Vector3.forward),
                 out var whatItHit, 1000))
             {
-                if (whatItHit.transform.gameObject.CompareTag("Button"))
+                var tagName = whatItHit.transform.gameObject.tag;
+                var objectName = whatItHit.transform.gameObject.name;
+                switch (tagName)
                 {
-                    var tempName = whatItHit.transform.gameObject.name;
-
-                      whatItHit.transform.gameObject.GetComponentInParent<ButtonScript>().button_Pressed(tempName);
-                    
-                   // PV.RPC("button_Pressed",RpcTarget.All,tempName);
-                    // var id = whatItHit.transform.gameObject.GetPhotonView().ViewID;
-                    // PV.RPC("RPC_Delete", RpcTarget.All, id); // tar bort men ger error.
+                    case "Button":
+                        whatItHit.transform.gameObject.GetComponentInParent<ButtonScript>().button_Pressed(objectName);
+                        break;
+                    case "Button2":
+                        whatItHit.transform.gameObject.GetComponentInParent<ButtonScript>().button_Pressed(objectName);
+                        break;
                 }
-
-                //PhotonNetwork.Destroy(whatItHit.transform.gameObject); Tar bort för alla, behöver Photonview
-                //PV.RPC("RPC_Ray", RpcTarget.All);
             }
         }
 
         BasicMovement();
         ToggleFlashLight();
     }
-
-    [PunRPC]
-    void RPC_Delete(int id)
-    {
-        // PhotonNetwork.Destroy(PhotonView.Find(id));
-        //  PhotonView.Find(id).GetComponent<ButtonScript>().button_Pressed();
-        //PhotonView.Find(id).GetComponent<Animation>().Play();
-    }
-
-    /* [PunRPC]
-     void RPC_Ray()
-     {
-         var ray = myCamera.ScreenPointToRay(Input.mousePosition);
-         if (Physics.Raycast(myCamera.transform.position, myCamera.transform.TransformDirection(Vector3.forward), out var whatItHit, 1000))
-         {
-             rayGameObject = whatItHit.collider.gameObject;
-             //raycastHitId = rayGameObject.GetPhotonView().ViewID;
-             PhotonNetwork.Destroy(rayGameObject);
-         }
-        
-         
-        
- 
-         //var selection = hit.transform;
-             //var selectionRenderer = selection.GetComponent<Renderer>();
-             //if (selectionRenderer != null)
-             //{
-             //  selectionRenderer.material = highlightMaterial;
-             //}
- // Physics.Raycast(myCamera.transform.position, myCamera.transform.forward, out whatItHit, distanceToSee);
-     }*/
-
-    [PunRPC]
-    void RPC_Shooting()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(myCamera.transform.position, myCamera.transform.TransformDirection(Vector3.forward),
-            out hit, 1000))
-        {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance,
-                Color.yellow);
-            Debug.Log("Did Hit");
-        }
-        else
-        {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
-            Debug.Log("Did not Hit");
-        }
-    }
-
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Ground"))
