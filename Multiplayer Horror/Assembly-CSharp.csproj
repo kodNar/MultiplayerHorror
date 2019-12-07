@@ -90,6 +90,7 @@
     <Compile Include="Assets\Scripts\Photon\PhotonLobby.cs" />
     <Compile Include="Assets\Scripts\Photon\PhotonRoom.cs" />
     <Compile Include="Assets\Scripts\Room1\Buttons\room1\ButtonScript.cs" />
+    <Compile Include="Assets\Scripts\Room2\ButtonScriptR2.cs" />
     <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />
     <None Include="Assets\Photon\PhotonUnityNetworking\readme.txt" />
     <None Include="Assets\ProCore\ProGrids\About\pc_AboutEntry_ProGrids.txt" />

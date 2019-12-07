@@ -63,27 +63,17 @@ public class ButtonScript : MonoBehaviourPunCallbacks, IPunObservable
         if (stream.IsWriting)
         {
             // We own this player: send the others our data
-            stream.SendNext(animationSlidingDoor.Play());
-            stream.SendNext(animationSlidingDoor2.Play());
+
         }
         else if (stream.IsReading)
         {
             //Network read this, others see
-            animationSlidingDoor = (Animation) stream.ReceiveNext();
-            animationSlidingDoor2 = (Animation) stream.ReceiveNext();
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
-        {
-            foreach (int ele in selectedColors)
-            {
-                Debug.Log(ele.ToString());
-            }
-        }
     }
 
     private void DeQueueColor()
@@ -93,17 +83,15 @@ public class ButtonScript : MonoBehaviourPunCallbacks, IPunObservable
             selectedColors.Dequeue();
         }
     }
-    public void button_Pressed(string hit)
+    public void Button_PressedR1(string hit)
     {
         PV.RPC("button_Pressed_Network", RpcTarget.All ,hit);
-        //PlayerMovement.whatItHit.collider.gameObject.name;
     }
 
     [PunRPC]
     void button_Pressed_Network(string hit)
     {
-        Debug.Log("Hej");
-         switch (hit)
+        switch (hit)
             {
                 case "ButtonOne":
                     Debug.Log("Button 1");

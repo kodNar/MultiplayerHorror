@@ -248,6 +248,9 @@
               </e>
             </e>
           </e>
+          <e p="Room2" t="Include">
+            <e p="ButtonScriptR2.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="Multiplayer Horror.sln" t="IncludeFlat" />

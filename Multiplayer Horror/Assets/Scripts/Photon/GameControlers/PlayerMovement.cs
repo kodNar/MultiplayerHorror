@@ -48,13 +48,13 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
         if (stream.IsWriting)
         {
             // We own this player: send the others our data
-            // stream.SendNext(playerFlashLight.enabled);
+            stream.SendNext(playerFlashLight.enabled);
             stream.SendNext(GameSetup.spawnCounter);
         }
         else if (stream.IsReading)
         {
             //Network read this, others see
-            // playerFlashLight.enabled = (bool) stream.ReceiveNext();
+            playerFlashLight.enabled = (bool) stream.ReceiveNext();
             GameSetup.spawnCounter = (int) stream.ReceiveNext();
         }
     }
@@ -74,15 +74,17 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
             if (Physics.Raycast(myCamera.transform.position, myCamera.transform.TransformDirection(Vector3.forward),
                 out var whatItHit, 1000))
             {
-                var tagName = whatItHit.transform.gameObject.tag;
-                var objectName = whatItHit.transform.gameObject.name;
+                var hitGameObject = whatItHit.transform.gameObject;
+                var tagName = hitGameObject.tag;
+                var objectName = hitGameObject.name;
+                
                 switch (tagName)
                 {
                     case "Button":
-                        whatItHit.transform.gameObject.GetComponentInParent<ButtonScript>().button_Pressed(objectName);
+                        hitGameObject.GetComponentInParent<ButtonScript>().Button_PressedR1(objectName);
                         break;
                     case "Button2":
-                        whatItHit.transform.gameObject.GetComponentInParent<ButtonScript>().button_Pressed(objectName);
+                        hitGameObject.GetComponentInParent<ButtonScriptR2>().Button_pressedR2(objectName);
                         break;
                 }
             }
