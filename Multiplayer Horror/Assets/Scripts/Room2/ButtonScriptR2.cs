@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Photon.Pun;
+﻿using Photon.Pun;
 using UnityEngine;
 
 public class ButtonScriptR2 : MonoBehaviourPunCallbacks, IPunObservable
@@ -20,31 +18,28 @@ public class ButtonScriptR2 : MonoBehaviourPunCallbacks, IPunObservable
     private Animation animationElevator;
     private Animation animationDoor;
 
-
-    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
+        PV = GetComponent<PhotonView>();
         animationOne = button1.GetComponent<Animation>();
         animationTwo = button2.GetComponent<Animation>();
         animationThree = button3.GetComponent<Animation>();
         animationFour = button4.GetComponent<Animation>();
         animationElevator = elevator1.GetComponent<Animation>();
         animationDoor = door.GetComponent<Animation>();
-        PV.GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
     void Update()
     {
-    
     }
+
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.IsWriting)
         {
             // We own this player: send the others our data
-
         }
         else if (stream.IsReading)
         {
@@ -54,9 +49,10 @@ public class ButtonScriptR2 : MonoBehaviourPunCallbacks, IPunObservable
 
     public void Button_pressedR2(string hit)
     {
-        PV.RPC("Button_Pressed_Network_R2", RpcTarget.All, hit);
+        PV.RPC("Button_Pressed_Network_R2", RpcTarget.All ,hit);
     }
-
+    
+    [PunRPC]
     void Button_Pressed_Network_R2(string hit)
     {
         switch (hit)
@@ -75,9 +71,8 @@ public class ButtonScriptR2 : MonoBehaviourPunCallbacks, IPunObservable
                 break;
             case "ButtonFour":
                 animationFour.Play();
-                
+                animationDoor.Play();
                 Debug.Log("Button four");
-                
                 break;
             case "ButtonElevator":
                 animationElevator.Play();

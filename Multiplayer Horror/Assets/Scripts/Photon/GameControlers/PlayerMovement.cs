@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq.Expressions;
-using System.Security.Cryptography;
-using Photon.Pun;
+﻿using Photon.Pun;
 using UnityEngine;
-using WebSocketSharp;
 
 public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
 
@@ -48,13 +42,13 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
         if (stream.IsWriting)
         {
             // We own this player: send the others our data
-            stream.SendNext(playerFlashLight.enabled);
+            //stream.SendNext(playerFlashLight.enabled);
             stream.SendNext(GameSetup.spawnCounter);
         }
         else if (stream.IsReading)
         {
             //Network read this, others see
-            playerFlashLight.enabled = (bool) stream.ReceiveNext();
+            //playerFlashLight.enabled = (bool) stream.ReceiveNext();
             GameSetup.spawnCounter = (int) stream.ReceiveNext();
         }
     }

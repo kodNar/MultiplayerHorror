@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq.Expressions;
+﻿using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 
@@ -87,7 +84,7 @@ public class ButtonScript : MonoBehaviourPunCallbacks, IPunObservable
     {
         PV.RPC("button_Pressed_Network", RpcTarget.All ,hit);
     }
-
+    
     [PunRPC]
     void button_Pressed_Network(string hit)
     {
@@ -150,13 +147,11 @@ public class ButtonScript : MonoBehaviourPunCallbacks, IPunObservable
                     if (selectedColors.Contains(7) && selectedColors.Contains(5))
                     {
                         soundExecute.PlayOneShot(right);
-                        Debug.Log("Grattis du vann!!");
                         animationSlidingDoor.Play();
                         animationSlidingDoor2.Play();
                     }
                     else
                     {
-                        Debug.Log("Det var fel, det som ligger i kön är:" + selectedColors);
                         soundExecute.PlayOneShot(wrong);
                     }
                     break;

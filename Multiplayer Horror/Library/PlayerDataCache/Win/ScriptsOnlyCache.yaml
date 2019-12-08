@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - ProGrids.pg_Editor
     Assembly-CSharp.dll:
     - ButtonScript
+    - ButtonScriptR2
     - GameSetup
     - PhotonLobby
     - PhotonPlayer
@@ -84,13 +85,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13170}
     - Class: 114
-      Script: {instanceID: 13534}
+      Script: {instanceID: 13536}
     - Class: 114
-      Script: {instanceID: 13604}
+      Script: {instanceID: 13606}
     - Class: 114
-      Script: {instanceID: 13690}
+      Script: {instanceID: 13692}
     - Class: 114
-      Script: {instanceID: 13700}
+      Script: {instanceID: 13702}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -149,14 +150,14 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12490}
     - Class: 114
-      Script: {instanceID: 13604}
+      Script: {instanceID: 13298}
+    - Class: 114
+      Script: {instanceID: 13606}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
       Script: {instanceID: 0}
     - Class: 157
-      Script: {instanceID: 0}
-    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -809,6 +810,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: 6ffc3d3437a2d9dd326206695f108b48
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ButtonScriptR2
+  - hash:
+      serializedVersion: 2
       Hash: c5fd97cc10b89deaf7c60af66a6b0d5a
     assemblyName: PhotonRealtime.dll
     namespaceName: Photon.Realtime
@@ -979,4 +986,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Multiplayer.unity
-  playerPath: C:/Users/Einar/Desktop/MultiplayerHorrorBuilds/Rama/Multiplayer Horror.exe
+  playerPath: C:/Users/Einar/Desktop/MultiplayerHorrorBuilds/1.0/Multiplayer Horror.exe
