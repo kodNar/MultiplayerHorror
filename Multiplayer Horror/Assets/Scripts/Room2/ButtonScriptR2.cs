@@ -7,16 +7,18 @@ public class ButtonScriptR2 : MonoBehaviourPunCallbacks, IPunObservable
     public GameObject button2;
     public GameObject button3;
     public GameObject button4;
-    public GameObject elevator1;
+    public GameObject elevatorButton1;
     public GameObject door;
+    public GameObject elevator;
     private PhotonView PV;
 
     private Animation animationOne;
     private Animation animationTwo;
     private Animation animationThree;
     private Animation animationFour;
-    private Animation animationElevator;
+    private Animation animationElevatorButton;
     private Animation animationDoor;
+    private Animation animationElevator;
 
     // Start is called before the first frame update
     void Start()
@@ -26,8 +28,9 @@ public class ButtonScriptR2 : MonoBehaviourPunCallbacks, IPunObservable
         animationTwo = button2.GetComponent<Animation>();
         animationThree = button3.GetComponent<Animation>();
         animationFour = button4.GetComponent<Animation>();
-        animationElevator = elevator1.GetComponent<Animation>();
+        animationElevatorButton = elevatorButton1.GetComponent<Animation>();
         animationDoor = door.GetComponent<Animation>();
+        animationElevator = elevator.GetComponent<Animation>();
     }
 
     // Update is called once per frame
@@ -75,6 +78,7 @@ public class ButtonScriptR2 : MonoBehaviourPunCallbacks, IPunObservable
                 Debug.Log("Button four");
                 break;
             case "ButtonElevator":
+                animationElevatorButton.Play();
                 animationElevator.Play();
                 Debug.Log("Elevator");
                 break;
