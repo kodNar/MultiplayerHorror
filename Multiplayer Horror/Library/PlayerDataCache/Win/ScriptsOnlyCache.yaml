@@ -810,7 +810,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 6ffc3d3437a2d9dd326206695f108b48
+      Hash: 2f02c13e64d416ae0bc7aa21837ed468
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtonScriptR2
@@ -986,4 +986,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Multiplayer.unity
-  playerPath: C:/Users/Einar/Desktop/MultiplayerHorrorBuilds/1.0/Multiplayer Horror.exe
+  playerPath: C:/Users/Einar/Desktop/MultiplayerHorrorBuilds/1.1/Multiplayer Horror.exe
