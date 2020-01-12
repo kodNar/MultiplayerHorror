@@ -1,7 +1,5 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-Editor.dll:
-    - ProGrids.pg_Editor
     Assembly-CSharp.dll:
     - ButtonScript
     - ButtonScriptR2
@@ -10,7 +8,6 @@ ScriptsOnlyBuild:
     - PhotonPlayer
     - PhotonRoom
     - PlayerMovement
-    - pg_SceneMeshRender
     PhotonUnityNetworking.Editor.dll:
     - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
@@ -25,7 +22,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -986,4 +982,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Multiplayer.unity
-  playerPath: C:/Users/Einar/Desktop/MultiplayerHorrorBuilds/1.1/Multiplayer Horror.exe
+  playerPath: C:/Users/Einar/Desktop/MultiplayerHorrorBuilds/1.21/Multiplayer Horror.exe
