@@ -27,6 +27,7 @@
             </e>
           </e>
         </e>
+        <e p="NPC_follower.cs" t="Include" />
         <e p="Photon" t="Include">
           <e p="PhotonChat" t="Include">
             <e p="Code" t="Include">
@@ -252,6 +253,7 @@
             <e p="ButtonScriptR2.cs" t="Include" />
           </e>
         </e>
+        <e p="SlidingDoor.cs" t="Include" />
       </e>
       <e p="Multiplayer Horror.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

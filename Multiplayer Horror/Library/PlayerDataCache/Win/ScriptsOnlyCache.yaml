@@ -1,5 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-Editor.dll:
+    - ProGrids.pg_Editor
     Assembly-CSharp.dll:
     - ButtonScript
     - ButtonScriptR2
@@ -8,6 +10,9 @@ ScriptsOnlyBuild:
     - PhotonPlayer
     - PhotonRoom
     - PlayerMovement
+    - Readme
+    - SlidingDoor
+    - pg_SceneMeshRender
     PhotonUnityNetworking.Editor.dll:
     - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
@@ -81,13 +86,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13170}
     - Class: 114
-      Script: {instanceID: 13536}
+      Script: {instanceID: 13538}
     - Class: 114
-      Script: {instanceID: 13606}
+      Script: {instanceID: 13608}
     - Class: 114
-      Script: {instanceID: 13692}
+      Script: {instanceID: 13694}
     - Class: 114
-      Script: {instanceID: 13702}
+      Script: {instanceID: 13704}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -125,6 +130,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
@@ -148,12 +155,18 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13298}
     - Class: 114
-      Script: {instanceID: 13606}
+      Script: {instanceID: 13300}
+    - Class: 114
+      Script: {instanceID: 13608}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
       Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 195
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -806,10 +819,16 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 2f02c13e64d416ae0bc7aa21837ed468
+      Hash: 638b6bfa2e5b8e211d74b54931b5761e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtonScriptR2
+  - hash:
+      serializedVersion: 2
+      Hash: 39500e8e5cb4c5de1521facac5598d89
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SlidingDoor
   - hash:
       serializedVersion: 2
       Hash: c5fd97cc10b89deaf7c60af66a6b0d5a
@@ -982,4 +1001,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Multiplayer.unity
-  playerPath: C:/Users/Einar/Desktop/MultiplayerHorrorBuilds/1.21/Multiplayer Horror.exe
+  playerPath: C:/Users/Einar/Desktop/MultiplayerHorrorBuilds/1.31/Multiplayer Horror.exe
