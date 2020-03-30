@@ -64,14 +64,14 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
 
         if (Input.GetMouseButtonDown(0))
         {
-            var ray = myCamera.ScreenPointToRay(Input.mousePosition);
+            // var ray = myCamera.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(myCamera.transform.position, myCamera.transform.TransformDirection(Vector3.forward),
                 out var whatItHit, 1000))
             {
                 var hitGameObject = whatItHit.transform.gameObject;
                 var tagName = hitGameObject.tag;
                 var objectName = hitGameObject.name;
-                
+
                 switch (tagName)
                 {
                     case "Button":
@@ -87,6 +87,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
         BasicMovement();
         ToggleFlashLight();
     }
+
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Ground"))

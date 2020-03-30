@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Photon.Pun;
+﻿using Photon.Pun;
 using UnityEngine;
+
 
 public class SlidingDoor : MonoBehaviour
 {
@@ -14,7 +12,7 @@ public class SlidingDoor : MonoBehaviour
     private Animation doorLeftOpen;
     private Animation doorRightClose;
     private Animation doorLeftClose;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,17 +23,15 @@ public class SlidingDoor : MonoBehaviour
     }
 
     // Update is called once per frame
-    
-    
 
-    [PunRPC] 
+
+    [PunRPC]
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             doorLeftOpen.Play("DoorLeft");
             doorRightOpen.Play("DoorRight");
-
         }
     }
 
@@ -45,7 +41,6 @@ public class SlidingDoor : MonoBehaviour
         {
             doorRightClose.Play("DoorRightClose");
             doorLeftClose.Play("DoorLeftClose");
-
         }
     }
 }

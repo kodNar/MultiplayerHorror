@@ -64,7 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AssetStoreOriginals\_SNAPS_PrototypingAssets\About\Scripts\Readme.cs" />
-    <Compile Include="Assets\NPC_follower.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
@@ -91,8 +90,9 @@
     <Compile Include="Assets\Scripts\Photon\PhotonLobby.cs" />
     <Compile Include="Assets\Scripts\Photon\PhotonRoom.cs" />
     <Compile Include="Assets\Scripts\Room1\Buttons\room1\ButtonScript.cs" />
+    <Compile Include="Assets\Scripts\Room1\SlidingDoor.cs" />
     <Compile Include="Assets\Scripts\Room2\ButtonScriptR2.cs" />
-    <Compile Include="Assets\SlidingDoor.cs" />
+    <Compile Include="Assets\Scripts\Room3\NPCmove.cs" />
     <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />
     <None Include="Assets\Photon\PhotonUnityNetworking\readme.txt" />
     <None Include="Assets\ProCore\ProGrids\About\pc_AboutEntry_ProGrids.txt" />
