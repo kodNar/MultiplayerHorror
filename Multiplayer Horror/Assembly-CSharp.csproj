@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\Room1\SlidingDoor.cs" />
     <Compile Include="Assets\Scripts\Room2\ButtonScriptR2.cs" />
     <Compile Include="Assets\Scripts\Room3\NPCmove.cs" />
+    <Compile Include="Assets\Scripts\platForm\platFormScript.cs" />
     <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />
     <None Include="Assets\Photon\PhotonUnityNetworking\readme.txt" />
     <None Include="Assets\ProCore\ProGrids\About\pc_AboutEntry_ProGrids.txt" />

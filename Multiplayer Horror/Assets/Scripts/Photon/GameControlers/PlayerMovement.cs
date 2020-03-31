@@ -36,7 +36,6 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
         }
     }
 
-
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.IsWriting)
@@ -52,8 +51,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
             GameSetup.spawnCounter = (int) stream.ReceiveNext();
         }
     }
-
-
+    
     // Update is called once per frame
     void Update()
     {

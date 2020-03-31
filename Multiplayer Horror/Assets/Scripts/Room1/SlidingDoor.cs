@@ -17,12 +17,10 @@ public class SlidingDoor : MonoBehaviour
     void Start()
     {
         doorRightOpen = doorRight.GetComponent<Animation>();
-        doorLeftOpen = doorLeft.GetComponent<Animation>();
         doorRightClose = doorRight.GetComponent<Animation>();
+        doorLeftOpen = doorLeft.GetComponent<Animation>();
         doorLeftClose = doorLeft.GetComponent<Animation>();
     }
-
-    // Update is called once per frame
 
 
     [PunRPC]
