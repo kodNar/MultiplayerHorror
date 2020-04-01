@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18613c4f-097a-4cb6-a87c-ae92196c7eea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Multiplayer Horror/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Multiplayer Horror/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Multiplayer Horror/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Multiplayer Horror/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Multiplayer Horror/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Multiplayer Horror/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Colors/Platform/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Colors/Platform/New Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Multiplayer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Multiplayer.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/GameControlers/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/GameControlers/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Room1/SlidingDoor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Room1/SlidingDoor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/Legacy/78/78b7660da6315be469cf680153c4afa5" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Artifacts/Legacy/78/78b7660da6315be469cf680153c4afa5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/Legacy/a8/a8c0844bd999ef04eb53fda80a6f82f5.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Artifacts/Legacy/a8/a8c0844bd999ef04eb53fda80a6f82f5.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/Legacy/f3/f315b05ed82c13a4b9c6d3f875cd7bc7" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Artifacts/Legacy/f3/f315b05ed82c13a4b9c6d3f875cd7bc7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/Legacy/fe/fe04515ac589e5847affd97c30fecc6b.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Artifacts/Legacy/fe/fe04515ac589e5847affd97c30fecc6b.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/10bee9-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/10bee9-mainStage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/25acb9-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/25acb9-mainStage.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -310,7 +292,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-2" />
     <option name="y" value="10" />
     <option name="width" value="1936" />
@@ -427,12 +409,12 @@
       <workItem from="1585474065931" duration="3276000" />
       <workItem from="1585578790732" duration="350000" />
       <workItem from="1585579620045" duration="316000" />
-      <workItem from="1585680264176" duration="7159000" />
+      <workItem from="1585680264176" duration="7312000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197330000" />
+    <option name="totallyTimeSpent" value="197483000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -445,7 +427,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="10" width="1936" height="1056" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08635394" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

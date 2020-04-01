@@ -84,6 +84,7 @@
     <Compile Include="Assets\ProCore\ProGrids\MonoBehaviour\pg_IgnoreSnap.cs" />
     <Compile Include="Assets\Scripts\CameraScripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\CameraScripts\PlayerRaycasting.cs" />
+    <Compile Include="Assets\Scripts\Elevator\platformElevator.cs" />
     <Compile Include="Assets\Scripts\Photon\GameControlers\GameSetup.cs" />
     <Compile Include="Assets\Scripts\Photon\GameControlers\PhotonPlayer.cs" />
     <Compile Include="Assets\Scripts\Photon\GameControlers\PlayerMovement.cs" />
