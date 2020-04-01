@@ -232,6 +232,9 @@
             <e p="CameraController.cs" t="Include" />
             <e p="PlayerRaycasting.cs" t="Include" />
           </e>
+          <e p="Elevator" t="Include">
+            <e p="platformElevator.cs" t="Include" />
+          </e>
           <e p="Photon" t="Include">
             <e p="GameControlers" t="Include">
               <e p="GameSetup.cs" t="Include" />

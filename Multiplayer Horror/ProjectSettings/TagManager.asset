@@ -8,6 +8,7 @@ TagManager:
   - ControlPanel
   - Button
   - Button2
+  - MagicCube
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Photon.Pun;
 using UnityEngine;
 
@@ -12,12 +13,11 @@ public class platFormScript : MonoBehaviour
     {
         platformAnimator = GetComponent<Animation>();
     }
-
-
+    
     [PunRPC]
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.tag+" klev på");
+       
         if (other.gameObject.CompareTag("Player"))
         {
             platformAnimator.Play("enter");
@@ -26,10 +26,12 @@ public class platFormScript : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log(other.gameObject.tag+" gick av");
+        
         if (other.gameObject.CompareTag("Player"))
         {
+
             platformAnimator.Play("exit");
         }
     }
+    
 }
