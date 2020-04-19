@@ -27,6 +27,7 @@
             </e>
           </e>
         </e>
+        <e p="CollisionControl.cs" t="Include" />
         <e p="Photon" t="Include">
           <e p="PhotonChat" t="Include">
             <e p="Code" t="Include">
@@ -195,6 +196,7 @@
             </e>
           </e>
         </e>
+        <e p="PickupObject.cs" t="Include" />
         <e p="ProCore" t="Include">
           <e p="ProGrids" t="Include">
             <e p="About" t="Include">
@@ -235,6 +237,7 @@
           <e p="Elevator" t="Include">
             <e p="platformElevator.cs" t="Include" />
           </e>
+          <e p="liftAble.cs" t="Include" />
           <e p="Photon" t="Include">
             <e p="GameControlers" t="Include">
               <e p="GameSetup.cs" t="Include" />

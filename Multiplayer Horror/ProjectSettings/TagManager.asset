@@ -9,6 +9,7 @@ TagManager:
   - Button
   - Button2
   - MagicCube
+  - LiftAble
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - puzzleCube
+  - Player
   - 
   - 
   - 

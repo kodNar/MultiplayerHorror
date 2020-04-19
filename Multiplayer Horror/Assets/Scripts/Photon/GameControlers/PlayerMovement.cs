@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
     private Camera myCamera;
     private PhotonView PV;
     private bool flashLight = true;
+    private bool liftingObject;
+    private GameObject hands;
 
 
     // Start is called before the first frame update
@@ -25,6 +27,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
         myCamera = GetComponentInChildren<Camera>();
         playerFlashLight = GetComponentInChildren<Light>();
         PV = GetComponent<PhotonView>();
+        hands = myCamera.transform.GetChild(0).gameObject;
 
         if (PV.IsMine)
         {
@@ -51,7 +54,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
             GameSetup.spawnCounter = (int) stream.ReceiveNext();
         }
     }
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -82,6 +85,11 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            TryLift();
+        }
+
         BasicMovement();
         ToggleFlashLight();
     }
@@ -96,16 +104,50 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
 
     void BasicMovement()
     {
-        Rigid.MoveRotation(Rigid.rotation *
-                           Quaternion.Euler(new Vector3(0, Input.GetAxis("Mouse X"), 0) *
-                                            MouseSensitivity)); //Kroppen snurrar därför gör kameran det också.
-        Rigid.MovePosition(transform.position + Input.GetAxis("Vertical") * MoveSpeed * transform.forward +
-                           Input.GetAxis("Horizontal") * MoveSpeed * transform.right); //Actual movement
+        Rigid.MoveRotation(Rigid.rotation * Quaternion.Euler(new Vector3(0, Input.GetAxis("Mouse X"), 0) * MouseSensitivity)); //Kroppen snurrar därför gör kameran det också.
+        Rigid.MovePosition(transform.position + Input.GetAxis("Vertical") * MoveSpeed * transform.forward + Input.GetAxis("Horizontal") * MoveSpeed * transform.right); //Actual movement
         myCamera.transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y"), 0f, 0f)); //Kamera upp och ner
+
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             Rigid.AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
             isGrounded = false;
+        }
+    }
+
+    private void TryLift()
+    {
+        if (liftingObject)
+        {
+            var liftedObject = hands.transform.GetChild(0).gameObject;
+            liftedObject.GetComponent<BoxCollider>().enabled = true;
+            liftedObject.GetComponent<Rigidbody>().useGravity = true;
+            liftedObject.GetComponent<Rigidbody>().isKinematic = false;
+            liftedObject.transform.position = hands.transform.position;
+            liftedObject.transform.rotation = hands.transform.rotation;
+            liftedObject.transform.SetParent(null);
+            liftingObject = false;
+        }
+
+        if (Physics.Raycast(myCamera.transform.position, myCamera.transform.TransformDirection(Vector3.forward),
+            out var whatItHit, 1000))
+        {
+            var hitGameObject = whatItHit.transform.gameObject;
+            var tagName = hitGameObject.tag;
+            var objectName = hitGameObject.name;
+            if (tagName.Equals("LiftAble"))
+            {
+                if (!liftingObject)
+                {
+                    hitGameObject.GetComponent<Rigidbody>().useGravity = false;
+                    hitGameObject.GetComponent<Rigidbody>().isKinematic = true;
+
+                    hitGameObject.transform.position = hands.transform.position;
+                    hitGameObject.transform.rotation = hands.transform.rotation;
+                    hitGameObject.transform.SetParent(hands.transform);
+                    liftingObject = true;
+                }
+            }
         }
     }
 
